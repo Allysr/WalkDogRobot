@@ -1,53 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-16T18:31:15.753965" rpa="false" schemaversion="5">
-<suite id="s1" name="Home" source="C:\Users\allys\Desktop\Robot\WalkDog\home.robot">
-<test id="s1-t1" name="Home page deve estar online" line="6">
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-16T20:17:07.136313" rpa="false" schemaversion="5">
+<suite id="s1" name="Signup" source="C:\Users\allys\Desktop\Robot\WalkDog\signup.robot">
+<test id="s1-t1" name="Deve realizar cadastro com sucesso" line="6">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-16T20:17:07.914996" level="INFO">${name} = Alicia</msg>
+<var>${name}</var>
+<arg>Alicia</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-16T20:17:07.914996" elapsed="0.000543"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-16T20:17:07.915539" level="INFO">${email} = alicia@teste.com</msg>
+<var>${email}</var>
+<arg>alicia@teste.com</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-16T20:17:07.915539" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-16T20:17:07.915539" level="INFO">${cpf} = 95595595540</msg>
+<var>${cpf}</var>
+<arg>95595595540</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-16T20:17:07.915539" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-16T20:17:07.915539" level="INFO">${cep} = 90035191</msg>
+<var>${cep}</var>
+<arg>90035191</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-16T20:17:07.915539" elapsed="0.000000"/>
+</kw>
 <kw name="New Browser" owner="Browser">
-<msg time="2024-03-16T18:31:16.528847" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\allys\\Desktop\\Robot\\WalkDog\\results\\browser\\traces\\a5bb1a74-5f22-4aa2-a0cd-75d90aad8764"}</msg>
-<msg time="2024-03-16T18:31:17.106935" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\allys\\Desktop\\Robot\\WalkDog\\results\\browser\\traces\\a5bb1a74-5f22-4aa2-a0cd-75d90aad8764"}</msg>
+<msg time="2024-03-16T20:17:07.915539" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\Users\\allys\\Desktop\\Robot\\WalkDog\\results\\browser\\traces\\b4e3bd3c-5d02-46a6-9d52-7d98cc85946d"}</msg>
+<msg time="2024-03-16T20:17:08.552642" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\Users\\allys\\Desktop\\Robot\\WalkDog\\results\\browser\\traces\\b4e3bd3c-5d02-46a6-9d52-7d98cc85946d"}</msg>
 <arg>chromium</arg>
 <arg>headless=False</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Create a new playwright Browser with specified options.</doc>
-<status status="PASS" start="2024-03-16T18:31:16.527910" elapsed="0.579025"/>
+<status status="PASS" start="2024-03-16T20:17:07.915539" elapsed="0.637103"/>
 </kw>
 <kw name="New Page" owner="Browser">
-<msg time="2024-03-16T18:31:18.384837" level="INFO">Successfully initialized new page object and opened url: https://walkdog.vercel.app/</msg>
-<msg time="2024-03-16T18:31:18.385828" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
-<arg>https://walkdog.vercel.app/</arg>
+<msg time="2024-03-16T20:17:09.901824" level="INFO">Successfully initialized new page object and opened url: https://walkdog.vercel.app/signup</msg>
+<msg time="2024-03-16T20:17:09.901824" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://walkdog.vercel.app/signup</arg>
 <tag>BrowserControl</tag>
 <tag>Setter</tag>
 <doc>Open a new Page.</doc>
-<status status="PASS" start="2024-03-16T18:31:17.106935" elapsed="1.278893"/>
+<status status="PASS" start="2024-03-16T20:17:08.554286" elapsed="1.347538"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-03-16T20:17:09.971046" level="INFO">Waited for Element with selector form h1 at state visible</msg>
+<arg>form h1</arg>
+<arg>visible</arg>
+<arg>500</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-03-16T20:17:09.901824" elapsed="0.070537"/>
 </kw>
 <kw name="Get Text" owner="Browser">
-<msg time="2024-03-16T18:31:18.534163" level="INFO">Text: 'Cuidado e diversão em cada passo'</msg>
+<msg time="2024-03-16T20:17:10.024457" level="INFO">Text: 'Faça seu cadastro'</msg>
 <arg>h1</arg>
-<arg>contains</arg>
-<arg>Cuidado e diversão em cada passo</arg>
+<arg>equal</arg>
+<arg>Faça seu cadastro</arg>
 <tag>Assertion</tag>
 <tag>Getter</tag>
 <tag>PageContent</tag>
 <doc>Returns text attribute of the element found by ``selector``.</doc>
-<status status="PASS" start="2024-03-16T18:31:18.386830" elapsed="0.147333"/>
+<status status="PASS" start="2024-03-16T20:17:09.973379" elapsed="0.051078"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-03-16T18:31:20.534561" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-03-16T18:31:18.534163" elapsed="2.000398"/>
-</kw>
-<kw name="Take Screenshot" owner="Browser">
-<msg time="2024-03-16T18:31:20.720775" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-03-16T20:17:10.025462" level="INFO">Fills the text 'Alicia' in the given field.</msg>
+<arg>css=input[name="name"]</arg>
+<arg>${name}</arg>
 <tag>PageContent</tag>
-<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
-<status status="PASS" start="2024-03-16T18:31:20.534561" elapsed="0.186214"/>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-03-16T20:17:10.025462" elapsed="0.048421"/>
 </kw>
-<status status="PASS" start="2024-03-16T18:31:16.523128" elapsed="4.198752"/>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-03-16T20:17:10.074875" level="INFO">Fills the text 'alicia@teste.com' in the given field.</msg>
+<arg>css=input[name="email"]</arg>
+<arg>${email}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-03-16T20:17:10.074875" elapsed="0.043278"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-03-16T20:17:10.120246" level="INFO">Fills the text '95595595540' in the given field.</msg>
+<arg>css=input[name="cpf"]</arg>
+<arg>${cpf}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-03-16T20:17:10.119219" elapsed="0.059129"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-03-16T20:17:10.180425" level="INFO">Fills the text '90035191' in the given field.</msg>
+<arg>css=input[name="cep"]</arg>
+<arg>${cep}</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-03-16T20:17:10.179385" elapsed="0.033272"/>
+</kw>
+<kw name="Click" owner="Browser">
+<arg>css=input[value="Buscar CEP"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-03-16T20:17:10.213672" elapsed="0.058511"/>
+</kw>
+<status status="PASS" start="2024-03-16T20:17:07.904577" elapsed="2.371676"/>
 </test>
-<doc>Suite de testes home page</doc>
-<status status="PASS" start="2024-03-16T18:31:15.753965" elapsed="5.090470"/>
+<doc>Suite de testes cadastro</doc>
+<status status="PASS" start="2024-03-16T20:17:07.137631" elapsed="3.269097"/>
 </suite>
 <statistics>
 <total>
@@ -56,7 +125,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Home">Home</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Signup">Signup</stat>
 </suite>
 </statistics>
 <errors>
