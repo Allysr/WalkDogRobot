@@ -1,6 +1,8 @@
 *** Settings ***
 Documentation     Suite de testes cadastro
 Resource    ../resources/Base.resource
+Test Setup    Start session
+Test Teardown    Finish session
 
 
 
@@ -21,12 +23,10 @@ Deve realizar cadastro com sucesso
     ...    page_text=Cuidado e diversão em cada passo    
     ...    cnh=${EXECDIR}/fixtures/toretto.jpg
 
-    Start session
     Go to signup page    ${dog_walker}   
     Fill signup form    ${dog_walker}    
     Submit signup form    ${dog_walker}   
     Popup should be    ${dog_walker}
-    Finish session
 
 *** Test Cases ***
 Não deve realizar cadastro se o cpf for incorreto
@@ -47,12 +47,11 @@ Não deve realizar cadastro se o cpf for incorreto
     ...    cnh=${EXECDIR}/fixtures/toretto.jpg    
     ...    cpf_alert_error=CPF inválido
 
-    Start session
     Go to signup page    ${dog_walker}   
     Fill signup form    ${dog_walker}    
     Submit signup form    ${dog_walker} 
     Cpf error    ${dog_walker}  
-    Finish session
+
 
 *** Test Cases ***
 Não deve realizar cadastro se os compos obrigatórios não forem preenchidos
@@ -62,10 +61,8 @@ Não deve realizar cadastro se os compos obrigatórios não forem preenchidos
     ...    signup_page_text=Faça seu cadastro    
     ...    page_text=Cuidado e diversão em cada passo    
 
-    Start session
     Go to signup page    ${dog_walker}   
     Submit signup form    ${dog_walker} 
-    Finish session
 
 
 

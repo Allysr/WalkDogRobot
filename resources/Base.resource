@@ -4,6 +4,7 @@ Library    Browser
 Resource    actions/signup.resource
 
 
+
 *** Keywords ***
 
 Start session
@@ -13,3 +14,5 @@ Start session
 
 Finish session
     Take Screenshot    fullPage=True
+
+

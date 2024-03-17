@@ -1,8 +1,8 @@
 # Walkdog
 
 > Este repositório contém testes automatizados desenvolvidos
-> para simular o processo cadastro na plataforma Walkdog
-> e com inserção de dados e upload de imagens
+> para simular o processo de cadastro na plataforma Walkdog
+> com inserção de dados e upload de imagens
 
 ### Tecnologias
 Projeto criado com:
@@ -20,11 +20,11 @@ cd walkdog
 robot -d ./results  tests/signup.robot
 ```
 
-### Testes b
-![Testes]()
+### Site utilizado
+![Walkdog](https://i.imgur.com/eqX77Ps.png)
 
 
 ### Relatório gerado
-![Relátorio]()
+![Relátorio](https://i.imgur.com/ujp9hdd.png)
 
 #### Site utilizado para os testes: [Walkdog](https://walkdog.vercel.app/)
